@@ -1,3 +1,9 @@
+let myFont;
+
+function preload(){
+  myFont = loadFont("go3v2.ttf")
+}
+
 let myMessage = "press left arrow if you would be a terrible boyfriend and right arrow if you would be a great boyfriend"
 
 let terrible = 0; 
@@ -8,20 +14,22 @@ function setup() {
   background(50);
   noStroke();
   fill(255);
-  text(myMessage, 30, 50, 300);
+  textFont(myFont);
+  text(myMessage, 50, 50, 300);
   textAlign(CENTER, CENTER);
   text("terrible boyfriend", 95, 220);
   text("great boyfriend", width-95, 220);
 }
 
 function draw() {
-  fill("pink")
+  fill(196, 41, 44)
   angleMode(DEGREES);
   arc(70, 150, 50, 50, 180, 0);
   arc(120, 150, 50, 50, 180, 0);
+  triangle(45, 150, 145, 150, 95, 200)
+  fill("pink");
   arc(width-70, 150, 50, 50, 180, 0);
   arc(width-120, 150, 50, 50, 180, 0);
-  triangle(45, 150, 145, 150, 95, 200)
   triangle(width-45, 150, width-145, 150, width-95, 200)
 
   fill("black")

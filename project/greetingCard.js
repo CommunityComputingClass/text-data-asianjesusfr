@@ -18,6 +18,6 @@ function setup() {
         
         }
 
-function mousePressed {
+function mousePressed (){
     i++
 }
